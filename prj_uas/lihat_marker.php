@@ -1,7 +1,7 @@
 <?php 
 	require 'koneksi.php';
 	$response = array(); 
-	$query = "SELECT nama,nbi,foto,latitude,longitude FROM mhs";
+	$query = "SELECT nama,nbi,tanggal_lahir,jurusan,foto,latitude,longitude FROM mhs";
 	$result = mysqli_query($koneksi, $query);
 	$ada = mysqli_num_rows($result);
 	$array = array();

@@ -20,6 +20,10 @@
 			$array['foto'] = $baris['foto'];
 			$array['latitude'] = $baris['latitude'];
 			$array['longitude'] = $baris['longitude'];
+			$array['tanggal_lulus']=$baris['tanggal_lulus'];
+			$array['jumlah_semester']=$baris['jumlah_semester'];
+			$array['dosen_wali']=$baris['dosen_wali'];
+			$array['lokasi']=$baris['lokasi'];
 			$array['kode'] = 1;
 			$array['pesan'] = "Data Berhasil Dimuat";
 		}

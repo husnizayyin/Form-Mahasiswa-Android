@@ -16,11 +16,15 @@
 		$kewarganegaraan = $_POST['kewarganegaraan']; 
 		$latitude = $_POST['latitude']; 
 		$longitude = $_POST['longitude'];
+		$tanggal_lulus=$_POST['tanggal_lulus'];
+		$jumlah_semester=$_POST['jumlah_semester'];
+		$dosen_wali=$_POST['dosen_wali'];
+		$lokasi=$_POST['lokasi'];
 
 
 		if ($_FILES['imageupload']) {
 			$foto = $ip.$filename;
-			$query = "INSERT INTO mhs (nbi, nama, alamat, tanggal_lahir, fakultas, jurusan, jenis_kelamin, hobi, kewarganegaraan,foto, latitude, longitude) VALUES ('$nbi', '$nama', '$alamat', STR_TO_DATE('$tanggal_lahir', '%Y-%m-%d'), '$fakultas', '$jurusan', '$jenis_kelamin', '$hobi', '$kewarganegaraan', '$foto', '$latitude', '$longitude')";
+			$query = "INSERT INTO mhs (nbi, nama, alamat, tanggal_lahir, fakultas, jurusan, jenis_kelamin, hobi, kewarganegaraan,foto, latitude, longitude, tanggal_lulus,jumlah_semester,dosen_wali,lokasi) VALUES ('$nbi', '$nama', '$alamat', '$tanggal_lahir', '$fakultas', '$jurusan', '$jenis_kelamin', '$hobi', '$kewarganegaraan', '$foto', '$latitude', '$longitude','$tanggal_lulus','$jumlah_semester','$dosen_wali','$lokasi')";
 			$result = mysqli_query($koneksi, $query); 
 			if ($result){
 				$destinationfile = $part.$filename; 
